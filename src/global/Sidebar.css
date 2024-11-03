@@ -1,0 +1,43 @@
+.sidebar-list {
+  padding: 0; /* Remove default padding */
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Equal spacing between icons and text */
+  padding: 15px 20px;
+  font-family: "Source Serif 4", serif; /* Use Source Serif 4 font */
+  font-weight: bold;
+  color: #024caa; /* Default font color when not collapsed */
+}
+
+.list-item:hover {
+  background-color: #5e8fa1; /* Darker highlight on hover */
+}
+
+.list-item svg {
+  color: #024caa; /* Icon color when not collapsed */
+}
+
+.sub-list-item {
+  padding-left: 40px; /* Indent for sublist items */
+}
+
+.MuiDrawer-paper {
+  background-color: #dbd3d3; /* Background color for the drawer */
+}
+
+.MuiIconButton-root {
+  color: #024caa; /* Set the menu icon color when not collapsed */
+}
+
+/* Collapsed Styles */
+.sidebar-list.collapsed .list-item,
+.sidebar-list.collapsed .list-item svg {
+  color: #ec8305; /* Font and icon color when collapsed */
+}
+
+.sidebar-list.collapsed .MuiIconButton-root {
+  color: #ec8305; /* Menu icon color when collapsed */
+}

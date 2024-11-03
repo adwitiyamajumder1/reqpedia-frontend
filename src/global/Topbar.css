@@ -1,0 +1,51 @@
+/* Topbar.css */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff; /* Background color */
+  padding: 10px 10px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #f5eded; /* Light border color */
+  border-radius: 5px;
+  background-color: white; /* Background color of the search bar */
+  transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+.search-bar:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.search-input {
+  padding: 5px 10px;
+  color: #333; /* Text color */
+  width: 200px; /* Adjust width as needed */
+}
+
+.search-button {
+  background-color: transparent; /* Transparent background */
+  color: #5e596b; /* Icon color */
+}
+
+.icon-buttons {
+  display: flex;
+  gap: 15px; /* Space between icons */
+}
+
+.icon-buttons .MuiIconButton-root {
+  color: #ec8305; /* Icon color */
+}
+.logo {
+  display: flex; /* Use flexbox to center content vertically */
+  align-items: center; /* Center the logo vertically */ /* Space between logo and next element */
+}
+
+.logo-image {
+  height: 50px; /* Adjust height as needed */
+  width: auto; /* Maintain aspect ratio */
+}
