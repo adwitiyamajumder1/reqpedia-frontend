@@ -123,6 +123,9 @@ const CandidatesPage = () => {
                           <Typography>
                             <strong>Experience:</strong> {candidate.experience}
                           </Typography>
+                          <Typography>
+                            <strong>Referred by:</strong> {candidate.referredby}
+                          </Typography>
                         </Box>
                       </AccordionDetails>
                     </Accordion>

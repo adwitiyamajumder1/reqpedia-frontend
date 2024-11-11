@@ -84,7 +84,7 @@ const JobDescriptionsPage = () => {
     <Box sx={{ position: "relative" }}>
       <Header
         title={"Job Descriptions"}
-        subtitle="Send and View Job Descriptions"
+        subtitle="Manage and View Job Descriptions"
       />
 
       {/* Grey Box behind heading and table */}
