@@ -21,7 +21,6 @@ export const candidates = [
     phone: "555-555-5555",
     qualification: "MBA",
     experience: "5 years",
-    referredby: "Jane Smith",
   },
   {
     name: "Jane Smith",
@@ -30,7 +29,6 @@ export const candidates = [
     phone: "555-555-5555",
     qualification: "PhD",
     experience: "8 years",
-    referredby: "Jane Smith",
   },
   {
     name: "Alice Johnson",
@@ -39,7 +37,6 @@ export const candidates = [
     phone: "555-555-5555",
     qualification: "BSc Computer Science",
     experience: "3 years",
-    referredby: "Jane Smith",
   },
   {
     name: "Bob Brown",
@@ -48,7 +45,6 @@ export const candidates = [
     phone: "555-555-5555",
     qualification: "BBA",
     experience: "6 years",
-    referredby: "Jane Smith",
   },
   {
     name: "Charlie Davis",
@@ -57,7 +53,6 @@ export const candidates = [
     phone: "555-555-5555",
     qualification: "MSc Information Technology",
     experience: "4 years",
-    referredby: "Jane Smith",
   },
   {
     name: "Diana Green",
@@ -66,7 +61,6 @@ export const candidates = [
     phone: "555-555-5555",
     qualification: "MBA Marketing",
     experience: "2 years",
-    referredby: "Jane Smith",
   },
   {
     name: "Evan White",
@@ -75,7 +69,6 @@ export const candidates = [
     phone: "555-555-5555",
     qualification: "BSc Engineering",
     experience: "7 years",
-    referredby: "Jane Smith",
   },
   {
     name: "Fiona Black",
@@ -84,7 +77,6 @@ export const candidates = [
     phone: "555-555-5555",
     qualification: "MBA Finance",
     experience: "5 years",
-    referredby: "Jane Smith",
   },
 ];
 

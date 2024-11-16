@@ -5,14 +5,11 @@ import Sidebar from "./global/Sidebar";
 import Topbar from "./global/Topbar";
 import CandidatesPage from "./screens/Candidates/Candidates";
 import Dashboard from "./screens/Dashboard/dashboard";
-import DashboardAdmin from "./screens/Dashboard/dashboardAdmin";
-import JDReportsPage from "./screens/Reports/JDReports";
-import CandidateReportsPage from "./screens/Reports/CandidateReports";
+import DashboardAdmin from "./screens/Admin/Dashboard/dashboardAdmin";
 import JobDescriptionsPage from "./screens/JobDescriptions/JobDescription";
 import Login from "./screens/loginPage/login";
 import theme from "./global/theme";
 import ReportsPage from "./screens/Reports/Reports";
-import ReportsForAdmins from "./screens/Reports/ReportsForAdmins";
 import ProtectedRoute from "./ProtectedRoutes"; // Import ProtectedRoute
 
 function App() {
@@ -79,14 +76,14 @@ function App() {
                       </ProtectedRoute>
                     }
                   />
-                  <Route
+                  {/* <Route
                     path="/CandidateReports"
                     element={
                       <ProtectedRoute>
                         <CandidateReportsPage />
                       </ProtectedRoute>
                     }
-                  />
+                  /> */}
                   <Route
                     path="/JobDescriptions"
                     element={
@@ -95,14 +92,14 @@ function App() {
                       </ProtectedRoute>
                     }
                   />
-                  <Route
+                  {/* <Route
                     path="/ReportsForAdmins"
                     element={
                       <ProtectedRoute>
                         <ReportsForAdmins />
                       </ProtectedRoute>
                     }
-                  />
+                  /> */}
                   {/* <Route
                     path="/sign-up-recruiter"
                     element={<SignUpRecruiter />}

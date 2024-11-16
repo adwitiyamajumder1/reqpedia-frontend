@@ -80,7 +80,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
         </ListItem>
 
         {/* Admin Dashboard Link */}
-        <ListItem
+        {/* <ListItem
           button
           component={Link}
           to="/dashboard-admin"
@@ -102,7 +102,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
         >
           <AdminPanelSettingsIcon />
           {!isCollapsed && <ListItemText primary="Admin Dashboard" />}
-        </ListItem>
+        </ListItem> */}
 
         {/* Candidates Link */}
         <ListItem
@@ -179,7 +179,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
           {!isCollapsed && <ListItemText primary="Reports" />}
         </ListItem>
         {/* Reports */}
-        <ListItem
+        {/* <ListItem
           button
           component={Link}
           to="/ReportsForAdmins"
@@ -201,7 +201,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
         >
           <AssessmentIcon />
           {!isCollapsed && <ListItemText primary="Reports for Admin" />}
-        </ListItem>
+        </ListItem> */}
       </List>
     </Drawer>
   );

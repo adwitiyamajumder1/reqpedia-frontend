@@ -16,7 +16,7 @@ import {
   Fab,
   TextField,
   InputAdornment,
-  Tooltip, // Import Tooltip from Material UI
+  Tooltip,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import EditIcon from "@mui/icons-material/Edit";
@@ -26,12 +26,15 @@ import AddIcon from "@mui/icons-material/Add";
 import SearchIcon from "@mui/icons-material/Search";
 import { candidates } from "../../data/mockData";
 import Header from "../../global/Headers";
-// Sample data for candidates
-
+import AddCandidateModal from "../Modals/AddCandidateModal";
 const CandidatesPage = () => {
-  const [searchTerm, setSearchTerm] = useState(""); // State for the search term
+  const [searchTerm, setSearchTerm] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
 
-  // Filter candidates based on the search term
+  // Open and close functions for the modal
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
+
   const filteredCandidates = candidates.filter((candidate) =>
     candidate.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -39,7 +42,7 @@ const CandidatesPage = () => {
   return (
     <Box sx={{ position: "relative" }}>
       <Header title={"Candidates"} subtitle="Manage Candidates" />
-      {/* Grey background for heading and table */}
+      
       <Box
         sx={{
           bgcolor: "#f5f5f5",
@@ -48,31 +51,27 @@ const CandidatesPage = () => {
           marginTop: "20px",
         }}
       >
-        {/* Heading */}
         <Typography
-          variant="h5" // Changed to a smaller variant
+          variant="h5"
           gutterBottom
-          align="center" // Align the heading in the center
+          align="center"
           className="candidates-heading"
         >
           CANDIDATES
         </Typography>
 
-        {/* Search Bar */}
         <TextField
           label="Search Candidates"
           variant="outlined"
           fullWidth
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)} // Update the search term on input change
+          onChange={(e) => setSearchTerm(e.target.value)}
           sx={{
-            marginBottom: 2, // Add some margin at the bottom
-            backgroundColor: "white", // Set background color to white
+            marginBottom: 2,
+            backgroundColor: "white",
           }}
           InputProps={{
-            style: {
-              textAlign: "center", // Center align text in the input
-            },
+            style: { textAlign: "center" },
             endAdornment: (
               <InputAdornment position="end">
                 <SearchIcon />
@@ -81,7 +80,6 @@ const CandidatesPage = () => {
           }}
         />
 
-        {/* Table */}
         <TableContainer component={Paper}>
           <Table>
             <TableHead>
@@ -123,15 +121,11 @@ const CandidatesPage = () => {
                           <Typography>
                             <strong>Experience:</strong> {candidate.experience}
                           </Typography>
-                          <Typography>
-                            <strong>Referred by:</strong> {candidate.referredby}
-                          </Typography>
                         </Box>
                       </AccordionDetails>
                     </Accordion>
                   </TableCell>
                   <TableCell align="right">
-                    {/* Tooltip added to icons */}
                     <Tooltip title="Assign JD">
                       <IconButton
                         sx={{
@@ -181,10 +175,11 @@ const CandidatesPage = () => {
         </TableContainer>
       </Box>
 
-      {/* Floating Action Button */}
+      {/* Floating Action Button to open the AddCandidateModal */}
       <Fab
         color="primary"
         aria-label="add"
+        onClick={handleOpenModal} // Set onClick to open modal
         style={{
           position: "fixed",
           bottom: "16px",
@@ -193,6 +188,9 @@ const CandidatesPage = () => {
       >
         <AddIcon />
       </Fab>
+
+      {/* AddCandidateModal component */}
+      <AddCandidateModal open={isModalOpen} handleClose={handleCloseModal} />
     </Box>
   );
 };

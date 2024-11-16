@@ -8,39 +8,14 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [emailError, setEmailError] = useState("");
-  const [passwordError, setPasswordError] = useState("");
   const navigate = useNavigate();
 
   const dummyEmail = "test@example.com";
   const dummyPassword = "password123";
 
-  const validateEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
-
-  const validatePassword = (password) => {
-    return password.length >= 6;
-  };
-
   const handleLogin = async (event) => {
     event.preventDefault();
-    setError("");
-    setEmailError("");
-    setPasswordError("");
 
-    // Validations
-    if (!validateEmail(email)) {
-      setEmailError("Please enter a valid email address.");
-      return;
-    }
-    if (!validatePassword(password)) {
-      setPasswordError("Password must be at least 6 characters.");
-      return;
-    }
-
-    // Dummy login check
     if (email === dummyEmail && password === dummyPassword) {
       localStorage.setItem("token", "dummyToken");
       navigate("/dashboard");
@@ -124,8 +99,6 @@ function Login() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              error={!!emailError}
-              helperText={emailError}
             />
             <TextField
               label="Password"
@@ -135,8 +108,6 @@ function Login() {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              error={!!passwordError}
-              helperText={passwordError}
             />
             <Button
               type="submit"

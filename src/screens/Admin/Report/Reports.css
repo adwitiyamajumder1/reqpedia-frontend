@@ -1,0 +1,56 @@
+/* Reports.css */
+
+.ag-theme-alpine {
+  --ag-background-color: #ffffff; /* Changed to white for header contrast */
+  --ag-border-color: #e3e6ec;
+  --ag-header-background-color: #ffffff; /* White background for headers */
+  --ag-header-foreground-color: #001f5b; /* Header text color set to #001F5B */
+  --ag-row-hover-background-color: #fff6e5; /* Light tint of #EC8305 */
+  --ag-header-cell-hover-background-color: #d9e2f3;
+  --ag-font-size: 14px;
+}
+
+/* Styling for the grid data cells */
+.custom-grid .ag-cell {
+  padding: 10px;
+  text-align: center; /* Center align the data */
+  color: #333;
+}
+
+/* Styling for the header cells */
+.custom-grid .ag-header-cell {
+  font-weight: bold;
+  color: #001f5b; /* Bold and dark blue for the header text */
+  background-color: #ffffff; /* White background for header */
+  border-bottom: 2px solid #001f5b; /* Optional for added effect */
+  text-align: center; /* Center align the header text */
+  text-transform: uppercase;
+  white-space: normal; /* Prevent truncation */
+  overflow: visible; /* Ensure text overflows properly */
+  text-overflow: clip; /* Remove ellipsis */
+}
+
+/* On hover, rows will show a very light tint of #EC8305 */
+.custom-grid .ag-row:hover {
+  background-color: #fff6e5 !important; /* Very light tint of #EC8305 */
+  transition: background-color 0.3s ease;
+}
+
+/* Pagination button styles */
+.custom-grid .ag-paging-button {
+  background-color: #ffffff;
+  color: white;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.custom-grid .ag-paging-button:hover {
+  background-color: #ffffff;
+}
+
+.custom-grid .ag-paging-button:disabled {
+  background-color: #e0e0e0;
+  color: #888;
+}

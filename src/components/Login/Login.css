@@ -1,0 +1,90 @@
+/* General page styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fbfdff; /* Dark blue background */
+    color: #ffffff;
+}
+
+.login-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 20px;
+}
+
+
+.logo img {
+    width: 120px;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Slight zoom-in on hover */
+}
+
+/* Heading style */
+.login-heading {
+    font-size: 3rem;
+    color: #f0a500; /* Light orange */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Form group styling for modern look */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Input field styling */
+input {
+    background-color: #0d0ae6; /* Light orange input background */
+    color: #0a1f44; /* Dark blue text */
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    width: 100%;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(240, 165, 0, 0.5); /* Orange glow */
+    transform: translateY(-2px); /* Subtle upward movement on focus */
+}
+
+/* Submit button styling */
+.submit-btn {
+    background-color: #0d0ae6;
+    color: #fbfdff;
+    padding: 35px;
+    font-size: 1.2rem;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #463411; /* Darker orange on hover */
+    transform: translateY(-3px); /* Subtle upward movement on hover */
+}
+
+.submit-btn:active {
+    transform: scale(0.98); /* Slight shrinking effect when clicking */
+}
+
+/* Responsive: center content in mobile views */
+@media (max-width: 768px) {
+    .login-heading {
+        font-size: 2rem;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+}
