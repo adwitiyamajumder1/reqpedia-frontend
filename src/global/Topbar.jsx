@@ -3,11 +3,13 @@ import SearchIcon from "@mui/icons-material/Search";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import logoImage from "./req.png"; 
+import logoImage from "./req.png";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Topbar = () => {
   const [profileMenuAnchor, setProfileMenuAnchor] = useState(null);
+  const navigate = useNavigate(); // For redirection
 
   // Handlers for profile menu
   const handleProfileClick = (event) => {
@@ -19,9 +21,18 @@ const Topbar = () => {
   };
 
   const handleProfileMenuOption = (option) => {
-    console.log(`Selected: ${option}`);
+    if (option === "Logout") {
+      handleLogout();
+    } else {
+      console.log(`Selected: ${option}`);
+    }
     handleProfileClose();
-    // Add navigation or action logic here (e.g., navigate to the profile or logout)
+  };
+
+  // Logout functionality
+  const handleLogout = () => {
+    localStorage.removeItem("authToken"); // Remove token from localStorage
+    navigate("/"); // Redirect to login page
   };
 
   // Placeholder handlers for Notifications and Settings

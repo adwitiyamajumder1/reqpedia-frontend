@@ -31,6 +31,7 @@ import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const [openModal, setOpenModal] = useState(false);
+  const [openCandidateModal, setCandidateModal] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null);
   const navigate = useNavigate();
 
@@ -46,6 +47,8 @@ const Dashboard = () => {
   };
 
   const handleOpenModal = () => setOpenModal(true);
+  const handleOpenCandidateModal = () => setCandidateModal(true);
+  const handleCloseCandidateModal = () => setCandidateModal(false);
   const handleCloseModal = () => setOpenModal(false);
 
   return (
@@ -68,7 +71,10 @@ const Dashboard = () => {
       >
         {/* Candidates Card */}
         <Grid item xs={4}>
-          <AddCandidateModal open={openModal} onClose={handleCloseModal} />
+          <AddCandidateModal
+            open={openCandidateModal}
+            onClose={handleCloseCandidateModal}
+          />
           <MuiCard
             className="card"
             sx={{
@@ -92,7 +98,7 @@ const Dashboard = () => {
                 View Candidates
               </MuiButton>
               <MuiButton
-                onClick={handleOpenModal}
+                onClick={handleOpenCandidateModal}
                 className="button add-candidate-button"
                 sx={{ marginLeft: "10px" }}
               >
