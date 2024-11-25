@@ -11,6 +11,7 @@ import Login from "./screens/loginPage/login";
 import theme from "./global/theme";
 import ReportsPage from "./screens/Reports/Reports";
 import ProtectedRoute from "./ProtectedRoutes"; // Import ProtectedRoute
+import ExistingUsersPage from "./screens/Admin/ExistingUsers/ExistingUsers";
 
 function App() {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -89,6 +90,14 @@ function App() {
                     element={
                       <ProtectedRoute>
                         <JobDescriptionsPage />
+                      </ProtectedRoute>
+                    }
+                  />
+                    <Route
+                    path="/Existing-Users"
+                    element={
+                      <ProtectedRoute>
+                        <ExistingUsersPage />
                       </ProtectedRoute>
                     }
                   />

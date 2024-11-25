@@ -368,3 +368,74 @@ export const columnsForReports = [
     sortable: true,
   },
 ];
+
+export const usersData = [
+  {
+    name: "John Admin",
+    email: "admin.john@example.com",
+    role: "Admin",
+    id: "U001",
+  },
+  {
+    name: "Emily Recruiter",
+    email: "emily.recruiter@example.com",
+    role: "Lead Recruiter",
+    id: "U002",
+  },
+  {
+    name: "Michael Executive",
+    email: "michael.executive@example.com",
+    role: "Executive",
+    id: "U003",
+  },
+  {
+    name: "Sophia Recruiter",
+    email: "sophia.recruiter@example.com",
+    role: "Recruiter",
+    id: "U004",
+  },
+  {
+    name: "William Admin",
+    email: "william.admin@example.com",
+    role: "Admin",
+    id: "U005",
+  },
+  {
+    name: "Olivia Executive",
+    email: "olivia.executive@example.com",
+    role: "Executive",
+    id: "U006",
+  },
+  {
+    name: "Ethan Recruiter",
+    email: "ethan.recruiter@example.com",
+    role: "Recruiter",
+    id: "U007",
+  },
+  {
+    name: "Mia Recruiter",
+    email: "mia.recruiter@example.com",
+    role: "Lead Recruiter",
+    id: "U008",
+  },
+  {
+    name: "James HR",
+    email: "james.hr@example.com",
+    role: "HR Manager",
+    id: "U009",
+  },
+  {
+    name: "Charlotte Admin",
+    email: "charlotte.admin@example.com",
+    role: "Admin",
+    id: "U010",
+  },
+];
+
+export const columnsForUsers = [
+  { headerName: "User ID", field: "id", sortable: true, filter: true },
+  { headerName: "Name", field: "name", sortable: true, filter: true },
+  { headerName: "Email", field: "email", sortable: true, filter: true },
+  { headerName: "Role", field: "role", sortable: true, filter: true },
+];
+
